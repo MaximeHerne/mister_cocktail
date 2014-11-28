@@ -1,8 +1,10 @@
 <h2>Ajouter un nouveau Cocktail</h2>
 
-<%= form_for(@cocktail) do |f| %>
+<%= form_for(@cocktail, html: { multipart: true }) do |f| %>
   <%= f.label :name %><br />
-  <%= f.text_field :name %>
+  <%= f.text_field :name %><br />
+  <%= f.label :picture %><br />
+  <%= f.file_field :picture %><br />
 
   <%= f.submit %>
 <% end %>
